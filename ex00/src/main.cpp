@@ -6,7 +6,7 @@
 /*   By: jaxztan <jaxztan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:01:22 by jaxztan           #+#    #+#             */
-/*   Updated: 2025/07/14 09:43:30 by jaxztan          ###   ########.fr       */
+/*   Updated: 2025/07/31 17:54:45 by jaxztan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 
 int main(void)
 {
-    std::cout << YELLOW_H << "Testing easyfind with a vector of integers" << RESET_H << std::endl << std::endl;
+    std::cout << PURPLE_H << "Testing easyfind with a vector of integers" << RESET_H << std::endl;
     std::vector<int> vec;
     for(int i = 10; i <= 100; i += 10)
         vec.push_back(i);
-    // std::cout << "size of vector: " << vec.size() << std::endl;
+    std::cout << std::endl;
+    for (size_t i = 0; i < vec.size(); ++i)
+        std::cout << "vec[" << i << "] = " << vec[i] << std::endl;
     try // Attempt to find the value 10 in the vector
     {
         std::cout << "looking for value: 10 //should found" << std::endl;
@@ -27,6 +29,8 @@ int main(void)
     catch (const std::runtime_error &e) {
         std::cerr << RED_H << e.what() << RESET_H << std::endl;
     }
+
+
     try // Attempt to find the value 100 in the vector
     {
         std::cout << "looking for value: 100 //should found" << std::endl;
@@ -35,6 +39,8 @@ int main(void)
     catch (const std::runtime_error &e) {
         std::cerr << RED_H << e.what() << RESET_H << std::endl;
     }
+
+
     try // Attempt to find the value 55 in the vector
     {
         std::cout << "looking for value: 55 //shouldn't found" << std::endl;
@@ -43,6 +49,8 @@ int main(void)
     catch (const std::runtime_error &e) {
         std::cerr << RED_H << e.what() << RESET_H << std::endl;
     }
+
+
     try // Attempt to find the value 32 in the vector
     {
         std::cout << "looking for value: 32 //shouldn't found" << std::endl;
@@ -59,6 +67,8 @@ int main(void)
     strVec.push_back("World");
     strVec.push_back("42");
     strVec.push_back("C++");
+    for(size_t i = 0; i < strVec.size(); ++i)
+        std::cout << "strVec[" << i << "] = " << strVec[i] << std::endl;
     std::cout << YELLOW_H <<"Testing easyfind with a vector of strings" << RESET_H << std::endl << std::endl;
     // std::cout << "size of vector: " << strVec.size() << std::endl;
     try // Attempt to find the string "Hello" in the vector
@@ -69,6 +79,8 @@ int main(void)
     catch (const std::runtime_error &e) {
         std::cerr << RED_H << e.what() << RESET_H << std::endl;
     }
+
+    
     try // Attempt to find the string "42" in the vector
     {
         std::cout << "looking for value: 42 //should found" << std::endl;
@@ -77,6 +89,8 @@ int main(void)
     catch (const std::runtime_error &e) {
         std::cerr << RED_H << e.what() << RESET_H << std::endl;
     }
+
+
     try // Attempt to find the string "hello" in the vector
     {
         std::cout << "looking for value: hello //shouldn't found" << std::endl;
@@ -85,6 +99,8 @@ int main(void)
     catch (const std::runtime_error &e) {
         std::cerr << RED_H << e.what() << RESET_H << std::endl;
     }
+
+
     try // Attempt to find the string "43" in the vector
     {
         std::cout << "looking for value: 43 //shouldn't found" << std::endl;
@@ -93,5 +109,6 @@ int main(void)
     catch (const std::runtime_error &e) {
         std::cerr << RED_H << e.what() << RESET_H << std::endl;
     }
+
     return 0;
 }

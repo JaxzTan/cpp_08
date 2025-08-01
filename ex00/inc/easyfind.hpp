@@ -6,7 +6,7 @@
 /*   By: jaxztan <jaxztan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:01:50 by jaxztan           #+#    #+#             */
-/*   Updated: 2025/07/14 09:30:33 by jaxztan          ###   ########.fr       */
+/*   Updated: 2025/08/01 12:21:21 by jaxztan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class runtime_error : public std::exception
         }
 };
 
+// int type
 template <typename T>
 typename T::iterator easyfind(T &container, int value)
 {
@@ -41,6 +42,7 @@ typename T::iterator easyfind(T &container, int value)
     return it;
 }
 
+// string type
 template <typename T>
 typename T::iterator easyfind(T &container, std::string value)
 {

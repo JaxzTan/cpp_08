@@ -6,7 +6,7 @@
 /*   By: jaxztan <jaxztan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 11:27:10 by jaxztan           #+#    #+#             */
-/*   Updated: 2025/07/20 11:29:22 by jaxztan          ###   ########.fr       */
+/*   Updated: 2025/08/12 15:30:03 by jaxztan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 
 # include <stack>
 # include <iostream>
+
+# define GREEN_H "\033[0;32m" //constructor called
+# define RESET_H "\033[0m"
+# define RED_H "\033[0;31m" //destructor called
+# define BLUE_H "\033[0;34m" // getrawbit
+# define YELLOW_H "\033[0;33m" //N/A
+# define PURPLE_H "\033[0;35m" //N/A
 
 template <typename T> class MutantStack: public std::stack<T> {
 	public:

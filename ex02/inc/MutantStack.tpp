@@ -6,7 +6,7 @@
 /*   By: jaxztan <jaxztan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/20 11:27:09 by jaxztan           #+#    #+#             */
-/*   Updated: 2025/08/07 19:27:20 by jaxztan          ###   ########.fr       */
+/*   Updated: 2025/08/12 14:56:14 by jaxztan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,14 @@ template <typename T> MutantStack<T>::~MutantStack()
 {}
 
 // Methods
+
+//Returns an iterator to the first element.
 template <typename T> typename MutantStack<T>::iterator MutantStack<T>::begin()
 {
 	return (std::stack<T>::c.begin());
 }
 
+// Returns an iterator to one past the last element.
 template <typename T> typename MutantStack<T>::iterator MutantStack<T>::end()
 {
 	return (std::stack<T>::c.end());
@@ -49,21 +52,25 @@ template <typename T> typename MutantStack<T>::const_iterator MutantStack<T>::en
 	return (std::stack<T>::c.end());
 }
 
+//	Returns a reverse iterator to the last element (start of reverse traversal).
 template <typename T> typename MutantStack<T>::reverse_iterator MutantStack<T>::rbegin()
 {
 	return (std::stack<T>::c.rbegin());
 }
 
+//Returns a reverse iterator to one before the first element (end of reverse traversal).
 template <typename T> typename MutantStack<T>::reverse_iterator MutantStack<T>::rend()
 {
 	return (std::stack<T>::c.rend());
 }
 
+// Returns a const reverse iterator to the last element (start of reverse traversal).
 template <typename T> typename MutantStack<T>::const_reverse_iterator MutantStack<T>::rbegin() const
 {
 	return (std::stack<T>::c.rbegin());
 }
 
+// Returns a const reverse iterator to one before the first element (end of reverse traversal).
 template <typename T> typename MutantStack<T>::const_reverse_iterator MutantStack<T>::rend() const
 {
 	return (std::stack<T>::c.rend());

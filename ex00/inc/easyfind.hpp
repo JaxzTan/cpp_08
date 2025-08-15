@@ -6,7 +6,7 @@
 /*   By: jaxztan <jaxztan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:01:50 by jaxztan           #+#    #+#             */
-/*   Updated: 2025/08/01 12:21:21 by jaxztan          ###   ########.fr       */
+/*   Updated: 2025/08/15 19:00:58 by jaxztan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <iostream>
 #include <exception>
 #include <algorithm>
+#include <vector>
 
 # define GREEN_H "\033[0;32m" //constructor called
 # define RESET_H "\033[0m"

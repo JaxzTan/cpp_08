@@ -6,7 +6,7 @@
 /*   By: jaxztan <jaxztan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/14 11:10:52 by jaxztan           #+#    #+#             */
-/*   Updated: 2025/07/18 11:51:26 by jaxztan          ###   ########.fr       */
+/*   Updated: 2025/08/15 19:00:51 by jaxztan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ int main()
     std::srand(time(0));
     for(int i = 0; i < 10000; ++i)
     {
-        sp.addNumber(rand());
+        sp2.addNumber(rand());
     }
-    std::cout << "shortest span = " << sp.shortestSpan() << std::endl;
-    std::cout << "longest span = " << sp.longestSpan() << std::endl;
+    std::cout << "shortest span = " << sp2.shortestSpan() << std::endl;
+    std::cout << "longest span = " << sp2.longestSpan() << std::endl;
     return 0;
 }
